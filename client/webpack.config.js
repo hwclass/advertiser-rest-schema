@@ -53,9 +53,6 @@ module.exports = {
     hot: true,
     historyApiFallback: true
   },
-  eslint: {
-    configFile: './.eslintrc'
-  },
   plugins: [
     new webpack.ProvidePlugin({
       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
