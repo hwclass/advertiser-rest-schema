@@ -7,18 +7,19 @@ A simple app with Node, Koa 2, React, MobX, Jest
 * [Koa 2](http://koajs.com/) / as Node framework for HTTP communication
 * [React](https://facebook.github.io/react/) / as client-side rendering library
 * [Mobx](https://github.com/mobxjs/mobx) / as client-side architectural approach to handle state with observables
+* [Jest](https://facebook.github.io/jest/) / as testing monster
 * [SCSS](http://sass-lang.com/guide) / as styling approach with some functional CSS
-* [ESLint](http://eslint.org/) / as code quality and standards controller
+* [ESLint](http://eslint.org/) / as code quality and standards checker
 
-[npm@next](http://www.npmjs.org) globally
+install [npm@next](http://www.npmjs.org)
 ```javascript
 npm install -g npm@next
 ```
-[babel-core](http://www.babeljs.io) core
+install [babel-core](http://www.babeljs.io)
 ```javascript
 npm i babel-core -g
 ```
-[babel-cli](http://www.babeljs.io) cli
+install [babel-cli](http://www.babeljs.io)
 ```javascript
 npm i babel-cli -g
 ```
