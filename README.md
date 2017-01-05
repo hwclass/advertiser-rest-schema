@@ -1,2 +1,2 @@
 # advertiser-rest-schema
-A simple feature with Node, Koa, React, Redux, Mocha/Chai/Sinon
+A simple app with Node, Koa 2, React, MobX, Jest
