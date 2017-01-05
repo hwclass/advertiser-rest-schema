@@ -1,0 +1,21 @@
+.navbar {
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+	.navbar {
+	  border-radius: 0;
+	  a {
+	    color: #777777 !important;
+	  }
+	}
+}
+
+.title {
+  font-size: 20px;
+}
+
+.version {
+  font-size: 15px;
+  margin-left: 4px;
+}

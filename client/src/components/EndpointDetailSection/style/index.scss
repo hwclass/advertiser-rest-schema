@@ -1,0 +1,26 @@
+.endpointDetails {
+  .bold {
+    font-weight: bold;
+  }
+  .statusCode {
+    margin-left: 4px;
+  }
+  .statusString {
+    margin-left: 4px;
+  }
+  .httpHeaderValue.accept {
+    margin-left: 4px;
+    color: #195f91; 
+  }
+  .httpHeaderValue.methods {
+    margin-left: 4px;
+    color: #195f91; 
+  }
+  .httpHeaderValue.applicationType {
+    margin-left: 4px;
+    color: #195f91;
+  }
+  pre {
+    border: none;
+  }
+}
