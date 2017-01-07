@@ -38,7 +38,9 @@ router
     '/',
     async(context, next) => {
       try {
-        context.type = 'application/' + context.request.header['content-type'];
+        context.response.vary = 'accept';
+        console.log(context.response.header);
+        context.type = context.request.header['content-type'].split(';')[0];
         context.body = await provideAllAdvertisers(dataTypes[context.request.header['content-type'].split('/')[1]].type);
         await next();
       } catch (err) {

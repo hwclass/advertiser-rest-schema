@@ -1,9 +1,9 @@
-import userLocationListStore from './UserLocationListStore';
+import appStore from './AppStore';
 import fileTypesStore from './FileTypesStore';
 import advertisersStore from './AdvertisersStore';
 
 export {
-	fileTypesStore,
-  advertisersStore,
-  userLocationListStore
+	appStore,
+  fileTypesStore,
+  advertisersStore
 };

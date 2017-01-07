@@ -8,6 +8,7 @@ import { tomorrow } from 'react-syntax-highlighter/dist/styles';
 
 import './style/index.scss';
 
+@inject('appStore') @observer
 @inject('advertisersStore') @observer
 @inject('fileTypesStore') @observer
 export default class EndpointDetailSection extends React.Component {
@@ -15,13 +16,13 @@ export default class EndpointDetailSection extends React.Component {
     super(props);
   }
   render() {
-    const { fileTypesStore, advertisersStore } = this.props;
+    const { appStore, fileTypesStore, advertisersStore } = this.props;
     return (
       <Well className="endpointDetails">
         <p>
           <span className="protocol bold">HTTP</span>
-          <span className="statusCode bold">200</span>
-          <span className="statusString bold">OK</span>
+          <span className="statusCode bold">{appStore.statusCode}</span>
+          <span className="statusString bold">{appStore.statusString}</span>
         </p>
         <p>
           <span className="httpHeader vary bold">Vary:</span>
