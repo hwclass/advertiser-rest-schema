@@ -1,2 +1,2 @@
-# propelled
-A simple MobX + React + ES6 boilerplate
+# advertiser-rest-schema client app
+The client-side for advertisers rest schema application.
