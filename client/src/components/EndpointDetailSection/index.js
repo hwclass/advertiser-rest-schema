@@ -34,15 +34,14 @@ export default class EndpointDetailSection extends React.Component {
         </p>
         <p>
           <span className="httpHeader contentType bold">Content-Type:</span>
-          <span className="httpHeaderValue applicationType">application/{fileTypesStore.selectedFileType}</span></p>
-        <p>
-          <SyntaxHighlighter
-            language={(advertisersStore.selectedFileType === 'json' ? 'json' : 'xml')}
-            style={tomorrow}
-          >
-            {JSON.stringify(mobx.toJS(advertisersStore.advertisers))}
-        </SyntaxHighlighter>
+          <span className="httpHeaderValue applicationType">application/{fileTypesStore.selectedFileType}</span>
         </p>
+        <SyntaxHighlighter
+          language={(advertisersStore.selectedFileType === 'json' ? 'json' : 'xml')}
+          style={tomorrow}
+        >
+          {JSON.stringify(mobx.toJS(advertisersStore.advertisers))}
+        </SyntaxHighlighter>
       </Well>
     );
   }
