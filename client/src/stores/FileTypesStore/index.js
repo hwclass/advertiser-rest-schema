@@ -1,4 +1,4 @@
-import { observable, action, toJS } from 'mobx';
+import { observable, action } from 'mobx';
 import { forEach, remove, isUndefined } from 'lodash';
 import remotedev from 'mobx-remotedev';
 
@@ -25,23 +25,9 @@ class FileTypesStore {
     this.selectedFileType = fileType;
   }
 
-  @action('Adds user')
-  addUser(user) {
-    this.locationList.push(user);
-  }
-
-  @action('Gets user list')
-  getUserList() {
-    return this.locationList.peek();
-  }
-
   @action('Removes location list item')
   removeFileTypes() {
     remove(this.fileTypes, !isUndefined);
-  }
-
-  toJS() {
-    return this.locationList.map(location => toJS(location));
   }
 
 }
