@@ -3,8 +3,11 @@ import mobx from 'mobx';
 import { observer, inject } from 'mobx-react';
 import { Well } from 'react-bootstrap';
 
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/styles';
+// import SyntaxHighlighter from 'react-syntax-highlighter';
+// import { tomorrow } from 'react-syntax-highlighter/dist/styles';
+
+import CodeMirror from 'react-codemirror';
+require('codemirror/mode/javascript/javascript');
 
 import './style/index.scss';
 
@@ -17,6 +20,18 @@ export default class EndpointDetailSection extends React.Component {
   }
   render() {
     const { appStore, fileTypesStore, advertisersStore } = this.props;
+    const options = {
+      lineNumbers: false,
+      readOnly: true,
+      nocursor: true,
+      mode: 'xml',
+      htmlMode: true,
+      matchClosing: true,
+      indentUnit: 2,
+      tabSize: 2,
+      showCursorWhenSelecting: false,
+      cursorHeight: 0
+    };
     return (
       <Well className="endpointDetails">
         <p>
@@ -36,12 +51,12 @@ export default class EndpointDetailSection extends React.Component {
           <span className="httpHeader contentType bold">Content-Type:</span>
           <span className="httpHeaderValue applicationType">application/{fileTypesStore.selectedFileType}</span>
         </p>
-        <SyntaxHighlighter
-          language={(advertisersStore.selectedFileType === 'json' ? 'json' : 'xml')}
-          style={tomorrow}
-        >
-          {JSON.stringify(mobx.toJS(advertisersStore.advertisers))}
-        </SyntaxHighlighter>
+        <div>
+          <CodeMirror
+            value={JSON.stringify(mobx.toJS(advertisersStore.advertisers))}
+            options={options}
+          />
+        </div>
       </Well>
     );
   }

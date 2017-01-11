@@ -1,7 +1,7 @@
 {
-  "name": "propelled",
+  "name": "advertiser-rest-schema",
   "version": "1.0.0",
-  "description": "A simple MobX + React + ES6 boilerplate",
+  "description": "advertiser-rest-schema",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 8083 --hot --inline --config ./webpack.config.js",
@@ -22,10 +22,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hwclass/propelled.git"
+    "url": ""
   },
   "keywords": [
-    "propelled",
     "react",
     "mobx",
     "es6",
@@ -34,9 +33,9 @@
   "author": "hwclass",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hwclass/propelled/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/hwclass/propelled#readme",
+  "homepage": "",
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
@@ -87,6 +86,7 @@
     "react": "^15.3.1",
     "react-addons-create-fragment": "^15.4.1",
     "react-bootstrap": "^0.30.7",
+    "react-codemirror": "^0.3.0",
     "react-dom": "^15.3.1",
     "react-google-maps": "^4.11.0",
     "react-prism": "^4.0.0",
@@ -94,5 +94,13 @@
     "react-router-redux": "^4.0.5",
     "react-syntax-highlighter": "^4.0.1",
     "uuid": "^2.0.3"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "/node_modules/react",
+      "/node_modules/react-dom",
+      "/node_modules/react-addons-test-utils"
+    ],
+    "testRegex": "(/tests/.*|(/.|/)(test|spec))/.jsx?$"
   }
 }
