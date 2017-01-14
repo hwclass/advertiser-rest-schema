@@ -1,8 +1,9 @@
-import { USER_LOCATION_LIST_URL } './api/';
-import { DEFAULT_ANIMATION, ZOOM } './map/';
+import { FILE_TYPES_URL, ADVERTISERS_URL } from './api/';
+import { APP_TITLE, APP_VERSION } from './components/';
 
 export {
-  USER_LOCATION_LIST,
-  DEFAULT_ANIMATION,
-  ZOOM
-}
+  FILE_TYPES_URL,
+  ADVERTISERS_URL,
+  APP_TITLE,
+  APP_VERSION
+};

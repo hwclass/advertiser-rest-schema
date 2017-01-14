@@ -1,21 +1,26 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
 
+// style
 import './style/index.scss';
 
-const Header = () => {
-  return (
-    <Navbar inverse>
-      <Navbar.Header>
-        <Navbar.Brand>
-          <a href="#">
-            <span className="title">Schibsted REST Framework</span>
-            <span className="version">v 3.1.1</span>
-          </a>
-        </Navbar.Brand>
-      </Navbar.Header>
-    </Navbar>
-	);
-};
-
-export default Header;
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { title, version } = this.props;
+    return (
+      <Navbar inverse>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#">
+              <span className="title">{title}</span>
+              <span className="version">{version}</span>
+            </a>
+          </Navbar.Brand>
+        </Navbar.Header>
+      </Navbar>
+    );
+  }
+}

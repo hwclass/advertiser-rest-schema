@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 8083 --hot --inline --config ./webpack.config.js",
     "build": "NODE_ENV=production webpack -p --progress --colors --config ./webpack.prod.config.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/setup.js 'src/**/spec.js'",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "test": "jest"
   },
   "babel": {
     "presets": [
@@ -53,6 +53,7 @@
     "chai-enzyme": "^0.4.2",
     "css-loader": "^0.23.1",
     "enzyme": "^2.4.1",
+    "enzyme-to-json": "^1.4.5",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.1",
     "eslint-loader": "^1.5.0",
