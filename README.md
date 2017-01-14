@@ -1,6 +1,8 @@
 # advertiser-rest-schema
 A simple app with Node, Koa 2, React, MobX, Jest
 
+<img src="http://i67.tinypic.com/2hp6ql1.png"/>
+
 ###Technical Spec
 * [Node](www.nodejs.org) / as server-side RESTful API platform
 * [npm@next](www.npmjs.org) / v3.10.8 / as package management system
