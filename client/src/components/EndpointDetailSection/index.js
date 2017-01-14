@@ -49,7 +49,7 @@ export default class EndpointDetailSection extends React.Component {
           <span className="httpHeaderValue applicationType">application/{fileTypesStore.selectedFileType}</span>
         </p>
         <SyntaxHighlighter
-          language={(fileTypesStore.selectedFileType === 'json' ? 'json' : 'xml')}
+          language={(fileTypesStore.selectedFileType === 'json' ? fileTypesStore.selectedFileType : 'xml')}
           style={tomorrow}
         >
           {

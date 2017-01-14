@@ -24,6 +24,10 @@ module.exports = {
       loader: 'react-hot!babel'
     },
     {
+      test: /\.css$/,
+      loaders: [ 'style-loader', 'css-loader' ]
+    },
+    {
       test:   /\.scss$/,
       loaders: ['style', 'css', 'sass', 'postcss']
     }]
@@ -41,7 +45,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss']
+    extensions: ['', '.js', '.jsx', '.scss', '.css']
   },
   output: {
     path: __dirname + '/dist',
