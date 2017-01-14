@@ -7,6 +7,8 @@ export const getAdvertisers = (dataType) => {
   fetch(ADVERTISERS_URL, { method: 'GET', mode: 'cors', headers: headers.default })
     .then((response) => {
       appStore.saveResponseProps({
+        method: 'GET',
+        url: response.url,
         statusCode: response.status,
         statusString: response.statusText
       });

@@ -3,6 +3,10 @@ import remotedev from 'mobx-remotedev';
 
 class AppStore {
 
+  @observable method;
+
+  @observable url;
+
   @observable protocol;
 
   @observable statusCode;
@@ -22,6 +26,8 @@ class AppStore {
   @observable httpContentTypeHeaderValue;
 
   constructor() {
+    this.method = '';
+    this.url = '';
     this.protocol = '';
     this.statusCode = '';
     this.statusString = '';
@@ -35,6 +41,8 @@ class AppStore {
 
   @action('Sets response object')
   saveResponseProps(responseObject) {
+    this.method = responseObject.method;
+    this.url = responseObject.url;
     this.protocol = responseObject.protocol;
     this.statusCode = responseObject.statusCode;
     this.statusString = responseObject.statusString;
@@ -48,6 +56,8 @@ class AppStore {
 
   @computed get responseObject() {
     return {
+      method: this.method,
+      url: this.url,
       protocol: this.protocol,
       statusCode: this.statusCode,
       statusString: this.statusString,

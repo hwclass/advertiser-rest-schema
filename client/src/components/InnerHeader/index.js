@@ -12,12 +12,6 @@ export default class InnerHeader extends React.Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
-    this.defaultDataType = 'json';
-  }
-
-  componentDidMount() {
-    actions.getFileTypes();
-    actions.getAdvertisers(this.defaultDataType);
   }
 
   onClick(target, prop) {
