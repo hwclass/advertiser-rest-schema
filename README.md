@@ -1,9 +1,9 @@
 # advertiser-rest-schema
-A simple app with Node, Koa 2, React, MobX, Jest
+A simple app with Node, Koa 2, React, MobX and Jest
 
 <img src="http://i67.tinypic.com/2hp6ql1.png"/>
 
-###Technical Spec
+### Technical Spec
 * [Node](www.nodejs.org) / as server-side RESTful API platform
 * [npm@next](www.npmjs.org) / v3.10.8 / as package management system
 * [Koa 2](http://koajs.com/) / as Node framework for HTTP communication
@@ -25,11 +25,11 @@ install [babel-cli](http://www.babeljs.io)
 ```javascript
 npm i babel-cli -g
 ```
-#####Run API
+##### Run API
 ```javascript
 npm run api
 ```
-#####Run client
+##### Run client
 ```javascript
 cd ./client
 npm run client
